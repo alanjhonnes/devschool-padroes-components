@@ -6,6 +6,11 @@ export default {
   title: 'ParentComponent',
   component: ParentComponent,
   template: `<app-parent></app-parent>`,
+  argTypes: {
+    'filhos': {
+      control: { type: 'array' },
+    },
+  },
 } as Meta<ParentComponent>;
 
 const Template: Story<ParentComponent> = (args: ParentComponent) => ({

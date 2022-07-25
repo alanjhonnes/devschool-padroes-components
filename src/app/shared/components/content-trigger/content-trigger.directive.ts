@@ -1,6 +1,5 @@
 import { Directive, HostListener, Input } from '@angular/core';
 import { ContentTriggerComponent } from './content-trigger.component';
-// import { ContentTriggerComponent } from './content-trigger.component';
 
 @Directive({
   // eslint-disable-next-line @angular-eslint/directive-selector

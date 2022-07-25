@@ -6,9 +6,6 @@ import { CounterComponent } from './counter.component';
 export default {
   title: 'Counter',
   component: CounterComponent,
-  argTypes: {
-    open: { control: 'boolean' },
-  },
 } as Meta<CounterComponent>;
 
 const Template: Story<CounterComponent> = (args: CounterComponent) => ({
@@ -17,7 +14,7 @@ const Template: Story<CounterComponent> = (args: CounterComponent) => ({
     imports: [SharedModule, FormsModule],
   },
   template: `
-  <app-counter [(ngModel)]="counter"></app-counter>
+  <app-counter [(ngModel)]="value"></app-counter>
   `,
 });
 

@@ -16,7 +16,7 @@ export class ParentComponent implements AfterViewInit {
   @ViewChildren(ChildComponent)
   componentesFilho!: QueryList<ChildComponent>;
 
-  filhos = ['1'];
+  filhos: number[] = [1];
 
   constructor() {
     console.log('construtor:', this.componentesFilho);
@@ -33,6 +33,6 @@ export class ParentComponent implements AfterViewInit {
   }
 
   adicionarFilho() {
-    this.filhos.push('');
+    this.filhos.push(this.filhos.length + 1);
   }
 }
