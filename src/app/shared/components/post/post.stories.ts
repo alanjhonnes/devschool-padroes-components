@@ -12,19 +12,6 @@ const Template: Story<PostComponent> = (args: PostComponent) => ({
   moduleMetadata: {
     imports: [SharedModule],
   },
-  //   template: `
-  //   <app-post
-  //   [entityId]="entityId"
-  //   [content]="content"
-  //   [isLiked]="isLiked"
-  //   [isClapped]="isClapped"
-  //   [likes]="likes"
-  //   [claps]="claps"
-  //   (like)="like($event)"
-  //   (unlike)="unlike($event)"
-  //   (clap)="clap($event)"
-  // ></app-post>
-  // `,
 });
 
 export const Basic = Template.bind({});
