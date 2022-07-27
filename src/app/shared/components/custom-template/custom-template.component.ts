@@ -30,7 +30,7 @@ export class CustomTemplateComponent {
   template: TemplateRef<TemplateContext> | null = null;
 
   @Input()
-  templateConteudo!: TemplateRef<TemplateContext>;
+  templateConteudo: TemplateRef<TemplateContext> | null = null;
 
   @Input()
   textos!: string[];
