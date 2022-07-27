@@ -30,17 +30,19 @@ export class DynamicComponent {
     const factory = this.componentFactoryResolver.resolveComponentFactory(
       PureComponentComponent
     );
-    const componentRef = factory.create(this.injector);
+    // const componentRef = factory.create(this.injector);
+    const componentRef = this.container.createComponent(PureComponentComponent);
     const instance = componentRef.instance;
     instance.open = Math.random() >= 0.5;
     instance.count = Math.floor(Math.random() * 1000);
-    this.viewContainerRef.insert(componentRef.hostView);
+    // this.viewContainerRef.insert(componentRef.hostView);
     // const compRef2 = this.container.createComponent(factory);
     // this.viewContainerRef.insert(componentRef.hostView);
-    // this.viewContainerRef.createComponent(factory, undefined, this.injector);
+    
   }
 
   removeComponent(): void {
     this.viewContainerRef.remove();
+    this.container.remove();
   }
 }
